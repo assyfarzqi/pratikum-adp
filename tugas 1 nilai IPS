@@ -1,0 +1,34 @@
+program Tugas_1_Pratikum_ADP;
+uses crt;
+var
+  agama,fisikadasar,kimiadasar,bing,pengmat,kalkulus1,andat,bindo,IPS:Real;
+  banyaksks,sks1,sks2:Integer;
+begin
+  writeln('Nama:Assyfa razaqi');
+  writeln('NIM:2310432038');
+  write('Agama:');
+  readln(agama);
+  write('Fisika Dasar:');
+  readln(fisikadasar);
+  write('Kimia Dasar:');
+  readln(kimiadasar);
+  write('Bahasa Inggris:');
+  readln(bing);
+  write('Pengantar Matematika:');
+  readln(pengmat);
+  write('Kalkulus I:');
+  readln(kalkulus1);
+  write('Analisis Data:');
+  readln(andat);
+  write('Bahasa Indonesia:');
+  readln(bindo);
+  write('SKS 1:');
+  readln(sks1);
+  write('SKS 2:');
+  readln(sks2);
+  write('Banyak SKS:');
+  readln(banyaksks);
+  IPS:=((agama*sks1)+(fisikadasar*sks1)+(kimiadasar*sks1)+(bing*sks1)+(pengmat*sks2)+(kalkulus*sks2)+(andat*sks2)+(bindo**sks1))/banyaksks;
+  write('IP Semester:',IPS);
+  readln;
+end.
