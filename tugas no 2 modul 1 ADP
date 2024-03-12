@@ -1,0 +1,19 @@
+program limas_segi_empat_beraturan;
+uses crt;
+var
+  panjang,tinggi,tinggisegitiga,Luas,volume:Real;
+begin
+  writeln('Nama:Assyfa Razaqi);
+  writeln('NIM:2310432038');
+  write('Panjang sisi alas:');
+  readln(panjang);
+  write('Tinggi Limas:');
+  readln(tinggi);
+  write('Tinggi segitiga:');
+  readln(tinggisegitiga);
+  Luas:=(panjang*panjang)+(4*((panjang*tinggisegitiga)/2));
+  volume:=(panjang*panjang*tinggi)/3;
+  writeln('Luas Permukaan:',Luas);
+  writeln('Volume:',volume);
+  readln;
+end.
