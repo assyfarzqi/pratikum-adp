@@ -1,0 +1,45 @@
+print("Assyfa Razaqi,2310432038")
+tujuan_bis = {
+    "Medan": 100000,
+    "Padang": 150000,
+    "Jambi":120000,
+    "Pekanbaru":220000,
+    "Bukittinggi":120000,
+    "Palembang":130000
+    
+}
+
+kelas_biaya = {
+    "Ekonomi": 10000,
+    "Bisnis": 20000,
+    "First": 30000,
+}
+
+print("Tujuan:")
+for index, tujuan in enumerate(tujuan_bis, start=1):
+    print(f"{index}. {tujuan} Rp {tujuan_bis[tujuan]}")
+tujuan_dipilih= int(input("Tujuan yang dipilih (masukkan nomor): "))
+
+print("Kelas (biaya tambahan):")
+for index, kelas in enumerate(kelas_biaya, start=1):
+     print(f"{index}. {kelas} Class: Rp {kelas_biaya[kelas]}")
+kelas_dipilih = int(input("Kelas yang dipilih (masukkan nomor): "))
+
+jumlah_tiket = int(input("\nJumlah tiket: "))
+total = tujuan_bis[list(tujuan_bis.keys())[tujuan_dipilih - 1]] + \
+              kelas_biaya[list(kelas_biaya.keys())[kelas_dipilih - 1]] * jumlah_tiket
+
+diskon = 0
+if jumlah_tiket > 5:
+    diskon = total * 0.1
+elif jumlah_tiket >= 3:
+    diskon = total* 0.05
+
+totalakhir = total - diskon
+
+print("Tujuan:", list(tujuan_bis.keys())[tujuan_dipilih - 1])
+print("Kelas:", list(kelas_biaya.keys())[kelas_dipilih - 1])
+print("Jumlah tiket:", jumlah_tiket)
+print("Total: Rp", total)
+print("Diskon Rp", diskon)
+print("Total setelah diskon Rp", totalakhir)
