@@ -1,0 +1,128 @@
+program tiketbus;
+uses crt;
+var 
+  
+  harga1,harga2,harga3,harga4,harga5,harga6,s,r,p,total:integer;
+  kota,tiket,total_harga,kelas,jumlahtkt:integer;
+  diskon,totalakhir:Real ;
+
+begin
+  begin
+   clrscr;
+   writeln('daftar kota pt ans');
+   writeln('1.jambi');
+   WriteLn('2.padang');
+   WriteLn('3.pekanbaru');
+   WriteLn('4.bukittinggi');
+   WriteLn('5.solok');
+   WriteLn('6.palembang');
+   writeln('input kota');
+   readln(kota);
+   
+   if(kota=1) then begin writeln('jambi');
+   harga1 := 150000;
+   writeln('total_harga = ',harga1); 
+   end;
+   if(kota=2) then begin writeLn('padang');
+   harga2:= 200000;
+   WriteLn('total_harga = ',harga2);
+   end;
+   if(kota=3) then begin WriteLn('pekanbaru');
+   harga3:= 180000;
+   WriteLn('total_harga=',harga3);
+   end;  
+   if(kota=4) then begin WriteLn('bukittinggi');
+   harga4:=170000;
+   WriteLn('total_harga=',harga4);
+   end;
+   if(kota=5) then begin WriteLn('solok');
+   harga5:=130000;
+   WriteLn('total_harga=',harga5);
+   end;
+   if(kota=6) then begin WriteLn('Palembang');
+   harga6:=250000;
+   WriteLn('total_harga=',harga6);
+   end;
+   readln;
+  
+  end;
+
+  begin
+   clrscr;
+   WriteLn ('Kelas');
+   WriteLn ('1.ekonomi class');
+   WriteLn ('2.bisnis class');
+   WriteLn ('3.first class');
+   WriteLn ('input kelas');
+   readln(kelas);
+   
+   if(kelas=1) then begin WriteLn ('ekonomi class');
+   s:=10000;
+   WriteLn ('total_harga:',s);
+   end;
+   if(kelas=2) then begin WriteLn('bisnis class');
+   r:=20000;
+   WriteLn ('total_harga:',r);
+   end;
+   if(kelas=3) then begin WriteLn('first class');
+   p:=30000;
+   WriteLn ('total_harga:',p);
+   end;
+   WriteLn ('jumlah tiket:');
+   ReadLn (jumlahtkt);
+   readln;
+  end;
+  
+   clrscr;
+   if(kota=1) then begin writeln('jambi');
+   harga1 := 150000;
+   writeln('total_harga = ',harga1);
+   end;
+   if(kota=2) then begin writeLn('padang');
+   harga2:= 200000;
+   WriteLn('total_harga = ',harga2);
+   end;
+   if(kota=3) then begin WriteLn('pekanbaru');
+   harga3:= 180000;
+   WriteLn('total_harga=',harga3) 
+   end;  
+   if(kota=4) then begin WriteLn('bukittinggi');
+   harga4:=170000;
+   WriteLn('total_harga=',harga4);
+   end;
+   if(kota=5) then begin WriteLn('solok');
+   harga5:=130000;
+   WriteLn('total_harga=',harga5);
+   end;
+   if(kota=6) then begin WriteLn('Palembang');
+   harga6:=250000;
+   WriteLn('total_harga=',harga6);
+   end;
+   if(kelas=1) then begin WriteLn ('ekonomi class');
+   s:=10000;
+   WriteLn ('total_harga:',s);
+   end;
+   if(kelas=2) then begin WriteLn('bisnis class');
+   r:=20000;
+   WriteLn ('total_harga:',r);
+   end;
+   if(kelas=3) then begin WriteLn('first class');
+   p:=30000;
+   WriteLn ('total_harga:',p);
+   end;
+   WriteLn ('jumlah tiket:');
+   ReadLn (jumlahtkt);
+   total:=((kota+kelas)*jumlahtkt);
+   WriteLn ('Total:',total);
+   if (jumlahtkt>=3) and (jumlahtkt<=5)then
+   diskon:=0.05
+   else if jumlahtkt>5 then
+   diskon:=0.1;
+   WriteLn ('diskon:',diskon);
+   totalakhir:=diskon*total;
+   WriteLn ('Total Akhir:',totalakhir);   
+   
+   
+   
+   readln ();
+end.
