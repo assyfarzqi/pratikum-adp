@@ -1,0 +1,20 @@
+print("Nama:Assyfa Razaqi")
+print("Nim:2310432038")
+def fibonacci(n):
+    fib = [1, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib
+
+while True:
+    try:
+        n = int(input("Masukkan nilai n : "))
+        if n < 3 or n > 199 or (100 <= n <= 109):
+            raise ValueError
+        fib_urutan = fibonacci(n)
+        fib_jumlah = sum(fib_urutan)
+        print(f"Bilangan Fibonacci ke-{n} adalah {fib_urutan[-1]}")
+        print(f"Jumlah dari f_1, f_2, ..., f_{n} adalah {fib_jumlah}")
+        break
+    except ValueError:
+        print("Input tidak valid. Pastikan n adalah bilangan bulat di antara 3 dan 199, bukan 100 hingga 109.")
