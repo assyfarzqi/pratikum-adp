@@ -1,0 +1,22 @@
+print("Nama:Assyfa Razaqi")
+print("NIM:2310432038")
+def ganti_vokal(teks):
+    vokal = 'aeiouAEIOU'
+    ubah_vokal = ''
+    for huruf in teks:
+        if huruf in vokal:
+            ubah_vokal += 'i'
+        else:
+            ubah_vokal += huruf
+    return ubah_vokal
+
+def main():
+    lirik = input("Input lirik lagu: ")
+    lirik_baru = lirik.split('.')
+    lirik_hasil = ''
+    for kalimat in lirik_baru:
+        lirik_hasil += ganti_vokal(kalimat.strip()) + '. '
+    print("Perubahan Vokal:", lirik_hasil.strip())
+
+if __name__ == "__main__":
+    main()
