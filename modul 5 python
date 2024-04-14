@@ -1,0 +1,19 @@
+n = int(input("Input banyak data: "))
+data = []
+for i in range(n):
+    x=(float(input(f"Input nilai x ke-{i+1}: ")))
+    if x > 0:
+        f_x = 3*x**2 + 7*x - 2
+    elif x < 0:
+        f_x = 2*x**2 - 5*x - 4
+    
+    g_x = f_x**2 - (f_x ** 0.5)
+    h_x = f_x * g_x
+    data.append((x,f_x,g_x,h_x))
+    
+print("----------------------------")
+print("| Nilai x |   f(x)   |   g(x)  |  h_(x)  |")
+print("----------------------------")
+for x, f_x,g_x,h_x in data:
+    print(f"|  {x:.2f}   |  {f_x:.2f}  |  {g_x:.2f}  |  {h_x:.2f}  |")
+print("----------------------------")
