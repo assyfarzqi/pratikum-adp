@@ -30,10 +30,27 @@ for i in range (len(rata2)) :
         maks = rata2[i]
         indeks = i
 print("mahasiswa dengan nilai tertinggi :{}".format(nama[indeks]))
-min = 0
-indeks = 0
-for i in range (len(rata2)) :
-    if (min > rata2[i]) :
-        min = rata2[i]
-        indeks = i
-print("mahasiswa dengan nilai terendah :{}".format(nama[indeks]))
+
+nilai_tertinggi = nilaiadp[0]
+for bil in nilaiadp:
+    if bil > nilai_tertinggi:
+        nilai_terendah = bil
+print("mahasiswa dengan nilai adp tertinggi : ", nilai_tertinggi)
+
+nilai_tertinggi2 = nilaikaldu[0]
+for bil in nilaikaldu:
+    if bil > nilai_tertinggi2:
+        nilai_tertinggi2 = bil
+print("mahasiswa dengan nilai kaldu tertinggi : ", nilai_tertinggi2)
+
+nilai_terendah = nilaiadp[0]
+for bil in nilaiadp:
+    if bil < nilai_terendah:
+        nilai_terendah = bil
+print("mahasiswa dengan nilai adp terendah : ", nilai_terendah)
+
+nilai_terendah2 = nilaikaldu[0]
+for bil in nilaikaldu:
+    if bil < nilai_terendah2:
+        nilai_terendah2 = bil
+print("mahasiswa dengan nilai kaldu terendah : ", nilai_terendah2)
