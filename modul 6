@@ -1,0 +1,39 @@
+print("Nama: Assyfa Razaqi")
+print("NIM: 2310432038")
+
+data = []
+nama = ["caca","cici","coco","cece","cucu"]
+nilaiadp = [90,80,88,75,85]
+nilaikaldu = [75,77,70,85,85]
+
+rata2 = []
+for i in range (len(nama)) :
+    rata2.append((nilaiadp[i]+ nilaikaldu[i]) /2)
+
+data.append((nama,nilaiadp,nilaikaldu,rata2))
+
+print("------------------------------------------------------")
+print("|  Nama  |  Nilai ADP  |  Nilai KalDu  |  Rata Rata  |")
+print("------------------------------------------------------")
+for i in range(len(data)) :
+    print(f"|  {nama[i]}  |     {nilaiadp[i]}      |       {nilaikaldu[i]}      |     {rata2[i]}    |")
+    print(f"|  {nama[i+1]}  |     {nilaiadp[i+1]}      |       {nilaikaldu[i+1]}      |     {rata2[i+1]}    |")
+    print(f"|  {nama[i+2]}  |     {nilaiadp[i+2]}      |       {nilaikaldu[i+2]}      |     {rata2[i+2]}    |")
+    print(f"|  {nama[i+3]}  |     {nilaiadp[i+3]}      |       {nilaikaldu[i+3]}      |     {rata2[i+3]}    |")
+    print(f"|  {nama[i+4]}  |     {nilaiadp[i+4]}      |       {nilaikaldu[i+4]}      |     {rata2[i+4]}    |")
+print("------------------------------------------------------")
+
+maks = 0
+indeks = 0
+for i in range (len(rata2)) :
+    if (maks< rata2[i]) :
+        maks = rata2[i]
+        indeks = i
+print("mahasiswa dengan nilai tertinggi :{}".format(nama[indeks]))
+min = 0
+indeks = 0
+for i in range (len(rata2)) :
+    if (min > rata2[i]) :
+        min = rata2[i]
+        indeks = i
+print("mahasiswa dengan nilai terendah :{}".format(nama[indeks]))
