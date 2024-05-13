@@ -1,0 +1,17 @@
+print("Nama:Assyfa Razaqi")
+print("NIM:2310432038")
+def suhu(t):   #t menunjukkan suhu pada celcius
+    if 0 <= x <= 100:
+        r = (4*t) /5
+        f = ((9*t)/5) + 32
+        k = t + 273
+        print("| satuan suhu | derajat suhu |")
+        print(f"|    Reamur   |  {r:<11} |")
+        print(f"|  Fahrenheit |  {f:<11} |")
+        print(f"|    Kelvin   |  {k:<11} |")
+
+    else:
+        print("suhu yang anda inputkan tidak sesuai")
+        return None
+x = int(input("t: "))
+suhu(x)
